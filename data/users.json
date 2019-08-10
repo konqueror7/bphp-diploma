@@ -1,0 +1,25 @@
+{
+    "dataTitle": {
+        "last_guid": 80
+    },
+    "dataArray": {
+        "o1": {
+            "email": "translator@translator.com",
+            "password": "translator",
+            "name": "Андрей Васильев",
+            "role": "translator"
+        },
+        "o2": {
+            "email": "interpreter@interpreter.com",
+            "password": "interpreter",
+            "name": "Петя Васечкин",
+            "role": "translator"
+        },
+        "o3": {
+            "email": "manager@manager.com",
+            "password": "manager",
+            "name": "Вася Петров",
+            "role": "manager"
+        }
+    }
+}

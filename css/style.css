@@ -1,0 +1,259 @@
+.content {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.enter-box {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  /* width: 60%;
+  margin-left: auto;
+  margin-right: auto; */
+  padding: 10%;
+  background-color: rgba(255, 255, 255, 1);
+  border-color: rgba(121, 121, 121, 1);
+  border-width: 1px;
+  border-style: solid;
+}
+
+.enter-box > input {
+  margin-top: 5%;
+}
+
+.enter-box > input:first-child {
+  margin-top: 0%;
+}
+
+.announces {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.announce {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.announce-text {
+  /* white-space: nowrap; */
+  display: block;
+  margin-right: 15px;
+  width: 80%;
+}
+
+.announce-text-par {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 59px;
+  margin: 0;
+}
+
+.announce-link {
+  text-decoration: none;
+  color: #000000;
+  width: 100%;
+}
+
+.announce-actions-requizite {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20%;
+}
+
+.announce-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.announce-requizite {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+.announce-trans-list {
+  display: flex;
+  flex-direction: row;
+  /* width: 40%; */
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.announce-trans-list-lang:last-child {
+  /* padding-left: 1%;
+  */
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.form-group {
+  margin-bottom: 2%;
+}
+
+.form-group-label {
+  display: block;
+  margin-bottom: 1%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.form-group-textarea {
+  width: 100%;
+  height: 100px;
+  transform: none;
+}
+
+.languages-deadline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.languages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.languages-item {
+  width: 100%;
+}
+
+.languages-item:first-child {
+  margin-right: 5%;
+}
+
+span.language-abbreviation {
+  margin-right: 5%;
+  font-weight: bold;
+}
+
+.edit-buttons {
+  /* margin: 3% 0; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.deadline {
+  text-align: right;
+}
+.deadline-data {
+  font-weight: bold;
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.main-menu-status-link {
+  display: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.main-menu-status-filters {
+  display: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 0;
+  width: 100%;
+  margin: 0;
+
+}
+
+.main-menu-status-filters-item {
+  display: block;
+  margin-right: 8%;
+}
+
+.main-menu-action-link {
+  display: inherit;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 22%;
+}
+
+
+.main-menu-exit-link {
+  display: block;
+}
+
+.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  color: initial;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* .button-exit {
+  content: '\02DF';
+}
+
+.button-exit::before {
+  content: '\02DF';
+} */
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.label-executor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 49%;
+}
+
+.label-client {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 49%;
+}
+
+.label-client input {
+  width: 80%;
+}
+
+.select-executor {
+  width: 64%;
+}
+
+.origilanguage-text {
+  width: 100%;
+}
+.status-buttons {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.status-button {
+  width: 30%;
+
+}
+
+.translations-group,
+.origilanguage-group {
+  width: 100%;
+}
