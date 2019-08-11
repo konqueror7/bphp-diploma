@@ -1,12 +1,24 @@
 <?php
 $users = new Users();
 
+/**
+ * Если GET-параметр 'order' равен 'new'
+ * создается новый заказ
+ * иначе извлекаются данные о заказе по его ID
+ */
 if (isset($_GET['order']) && $_GET['order'] == 'new') {
     $getsOrder = new Order();
 } elseif ($_GET['order'] !== 'new') {
     $getsOrder = $orders->getOrder($_GET['order']);
 }
 
+/**
+ * Сохрарнение заказа очистка $_POST
+ * и возврат на страницу списка заказов
+ * при использовании кнопки 'Save' ($_POST['submit']) статус заказа 'new'
+ * при использовании кнопки 'Done' статус заказа 'done'
+ * при использовании кнопки 'Reject' статус заказа 'reject'
+ */
 if (isset($_POST['submit']) || isset($_POST['state'])) {
     if ($_POST['ordernumber'] !== 'new') {
         $commitsOrder = new Order($_POST['ordernumber']);
@@ -39,13 +51,14 @@ if (isset($_POST['submit']) || isset($_POST['state'])) {
             <form class="" action="" name="order-manager" method="post">
                 <div class="form-group flex-row">
                     <input type="hidden" name="ordernumber" value="<?php print $_GET['order'] ?>">
-
+                    <!-- Выбор ответсвенного за заказ -->
                     <label for="executor" class="label-executor">Ответственный:
                         <select class="select-executor" name="executor" size="1" required>
                             <?php
                             if (isset($getsOrder->executor)) {
                                 print '<option selected value="'.$getsOrder->executor.'">';
-                                print $getsOrder->executor.' - '.$users->determineWorkload($orders, $getsOrder->executor).'</option>';
+                                print $getsOrder->executor.' - ';
+                                print $users->determineWorkload($orders, $getsOrder->executor).'</option>';
                             } else {
                                 print '<option selected disabled value="">Не назначен</option>';
                             }
@@ -53,20 +66,21 @@ if (isset($_POST['submit']) || isset($_POST['state'])) {
                             ?>
                         </select>
                     </label>
-
+                    <!-- Ввод названия или имени клиента -->
                     <label for="client" class="label-client"> Клиент
                         <?php
                         if (isset($getsOrder->client)) {
                             print '<input type="text" name="client"';
                             print 'value="'.$getsOrder->client.'" required placeholder="Введите имя клиента">';
                         } else {
-                            print '<input type="text" name="client" value="" required placeholder="Введите имя клиента">';
+                            print '<input type="text" name="client" value=""';
+                            print 'required placeholder="Введите имя клиента">';
                         }
-
                         ?>
-
                     </label>
                 </div>
+                      <!-- настройки заказа -->
+                      <!-- Выбор языка источника -->
                       <div class="form-group flex-row">
                         <label class="origilanguage-group">
                           <span class="origilanguage-group-label">Язык оригинала:</span>
@@ -83,7 +97,8 @@ if (isset($_POST['submit']) || isset($_POST['state'])) {
                                 } else {
                                     print '<label class="origilanguage">';
                                     print '<input type="radio" name="origilanguage" value="'.$key.'">';
-                                    print '<span class="radio-group-label">'.Orders::expandLangAbbreviation($key).'</span>';
+                                    print '<span class="radio-group-label">';
+                                    print Orders::expandLangAbbreviation($key).'</span>';
                                     print '</label>';
                                 }
                             }
@@ -91,7 +106,7 @@ if (isset($_POST['submit']) || isset($_POST['state'])) {
                           </div>
                         </label>
                       </div>
-
+                      <!-- множественный выбор языков перевода -->
                       <div class="form-group flex-row">
                           <label class="translations-group">
                                 <span class="translations-group-label">Языки перевода:</span>
@@ -100,7 +115,8 @@ if (isset($_POST['submit']) || isset($_POST['state'])) {
                                     foreach (Config::TRANSLATION_LANG as $key) {
                                         if (in_array($key, array_keys((array) $getsOrder->translations))) {
                                             print '<label class="translations">';
-                                            print '<input type="checkbox" name="translations[]" value="'.$key.'" checked>';
+                                            print '<input type="checkbox" name="translations[]" value="';
+                                            print $key.'" checked>';
                                             print '<span class="check-group-label">';
                                             print Orders::expandLangAbbreviation($key);
                                             print '</span>';
@@ -119,7 +135,8 @@ if (isset($_POST['submit']) || isset($_POST['state'])) {
                                 </div>
                           </label>
                       </div>
-
+                  <!-- Текстовые области для ввода или просмотра текста
+                  на языке оригинала с возможностью редактирования -->
                   <div class="form-group flex-row">
                         <?php
                         if (isset($getsOrder->origiLanguage)) {
@@ -138,7 +155,8 @@ if (isset($_POST['submit']) || isset($_POST['state'])) {
                         }
                         ?>
                   </div>
-
+                  <!-- Текстовые области для ввода или просмотра с редактированием
+                   переводов на выбранные языки с возможностью редактирования -->
                   <div class="form-group">
                     <?php
                     if (isset($getsOrder->translations)) {
@@ -151,18 +169,20 @@ if (isset($_POST['submit']) || isset($_POST['state'])) {
                     }
                     ?>
                   </div>
-
+                  <!-- Кнопки сохранения с изменением статуса заказа -->
                   <div class="form-group flex-row">
                       <div class="status-buttons">
                           <button type="submit" name="state" value="done">Done</button>
                           <button type="submit" name="state" value="reject">Reject</button>
                       </div>
+                      <!-- Поле ввода крайнего срока и кнопка сохранения со статусом 'new' -->
                       <div class="deadline-submit">
                           <label class="deadline-label">
                             <span class="deadline-group-label">Крайний срок</span>
                             <?php
                             if (isset($getsOrder->deadline)) {
-                                print '<input type="text" name="deadline" value="'.date('d/m/Y', $getsOrder->deadline).'" placeholder="10/12/2019" required>';
+                                print '<input type="text" name="deadline" value="';
+                                print date('d/m/Y', $getsOrder->deadline).'" placeholder="10/12/2019" required>';
                             } else {
                                 print '<input type="text" name="deadline" value="" placeholder="10/12/2019" required>';
                             }

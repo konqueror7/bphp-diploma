@@ -1,4 +1,8 @@
 <?php
+
+/**
+ * Константы проекта
+ */
 class Config extends Singleton
 {
     const DATABASE_PATH = 'data/';

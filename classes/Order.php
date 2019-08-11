@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Создает объект класса Order
+ * для записи в массив DataArray
+ */
 class Order extends DataRecordModel
 {
     public $executor;
@@ -9,6 +13,11 @@ class Order extends DataRecordModel
     public $origiLanguage;
     public $translations;
 
+    /**
+     * Конструктор извлекает значения
+     * для записи в свойства объекта Order
+     * из данных формы редактирования заказа
+     */
     public function addOrderFromForm()
     {
         $this->executor = strval($_POST['executor']);
@@ -19,12 +28,21 @@ class Order extends DataRecordModel
         $this->translations = (object) $this->addTransLang();
     }
 
+    /**
+     * преобразует дату из строкового формата
+     * во временную метку Unix
+     * @param  string $stringDate дата вида дд/мм/гггг
+     * @return string значение в секундах
+     */
     public function stringToTime($stringDate)
     {
         $date = DateTime::createFromFormat('d/m/Y', $stringDate);
         return $date->getTimestamp();
     }
 
+    /**
+     * индексный массив аббревиатур языков на который надо сделать перевод текста
+     */
     public function addTransLang()
     {
         $retObj = [];

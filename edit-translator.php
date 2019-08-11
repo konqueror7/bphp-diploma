@@ -4,6 +4,17 @@ $orders = new Orders();
 
 $order = $orders->getOrder($_GET['order']);
 
+/**
+ * При отправке данных формой редактирования заказа
+ * переводы на другие языки сохраняются в json-файл
+ * в виде пар ключ: значение где ключ - аббревиатура языка
+ * (ru, en и др.) а перевод - значение.
+ * Очистка глобальной переменной $_POST.
+ * Перенаправление на страницу со списком заказов.
+ * Если отправка формы была иницииорвана кнопкой "Resolved"
+ * то статус заказа $order->state при сохранении меняется на "resolved"
+ * через переменную $_POST['state']
+ */
 if (isset($_POST['submit'])) {
     foreach ($order->translations as $langAbbr => $langVal) {
         foreach ($_POST as $key => $value) {
@@ -33,7 +44,7 @@ if (isset($_POST['submit'])) {
         <title></title>
     </head>
     <body>
-      <!-- <p>Редактирование текста заказа</p> -->
+      <!-- Редактирование переводов заказа -->
         <div class="content">
           <div class="form-group flex-row">
             <a href="?exit=true" class="button button-exit">Exit</a>
@@ -74,37 +85,36 @@ if (isset($_POST['submit'])) {
                 </div>
 
             </div>
-
+            <!-- Форма заказа -->
             <div>
                 <form class="" action="" method="post">
                     <input type="hidden" name="ordernumber" value="<?php print $_GET['order'] ?>">
-                        <div class="form-group">
-                            <?php
-                            foreach ($order->origiLanguage as $langKey => $lang) {
-                                print '<label for="sourcelang">';
-                                print '<textarea name="sourcelang-'.$langKey.'"';
-                                print 'class="form-group-textarea" disabled>'.$lang.'</textarea>';
-                                print '</label>';
-                            }
-                            ?>
-                        </div>
+                    <div class="form-group">
+                        <?php
+                        foreach ($order->origiLanguage as $langKey => $lang) {
+                            print '<label for="sourcelang">';
+                            print '<textarea name="sourcelang-'.$langKey.'"';
+                            print 'class="form-group-textarea" disabled>'.$lang.'</textarea>';
+                            print '</label>';
+                        }
+                        ?>
+                    </div>
 
-                        <div class="form-group">
-                            <?php
-                            foreach ($order->translations as $transKey => $lang) {
-                                print '<label for="translang">';
-                                print '<span class="form-group-label">'.$transKey.'</span>';
-                                print '<textarea name="'.$transKey.'" class="form-group-textarea">'.$lang.'</textarea>';
-                                print '</label>';
-                            }
-                            ?>
-                        </div>
+                    <div class="form-group">
+                        <?php
+                        foreach ($order->translations as $transKey => $lang) {
+                            print '<label for="translang">';
+                            print '<span class="form-group-label">'.$transKey.'</span>';
+                            print '<textarea name="'.$transKey.'" class="form-group-textarea">'.$lang.'</textarea>';
+                            print '</label>';
+                        }
+                        ?>
+                    </div>
 
-                        <div class="edit-buttons">
-                            <button type="submit" name="state" value="resolved">Resolved</button>
-                            <input type="submit" name="submit" value="Save">
-                        </div>
-
+                    <div class="edit-buttons">
+                        <button type="submit" name="state" value="resolved">Resolved</button>
+                        <input type="submit" name="submit" value="Save">
+                    </div>
                 </form>
             </div>
         </div>

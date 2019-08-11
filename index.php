@@ -1,11 +1,4 @@
 <?php
-// if ($_POST) {
-//     setcookie($email, $_POST['email'], '/');
-//     setcookie($email, $_POST['email'], '/');
-//     header('Location: http://' . $_SERVER['HTTP_HOST'] . '/bphp-diploma/authorization.php');
-// }
-
-
 ?>
 
 <!DOCTYPE html>

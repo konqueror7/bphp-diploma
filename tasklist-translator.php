@@ -1,6 +1,9 @@
 <?php
 
-if (isset($_GET['state']) && $_GET['state'] !== 'all') {
+/**
+ * Фльтрация списка заказов по их состоянию
+ */
+if (!empty($_GET['state']) && $_GET['state'] !== 'all') {
     $result = $orders->find('executor', $_SESSION['name'])->find('state', $_GET['state'])->getObjs(true);
 } else {
     $result = $orders->find('executor', $_SESSION['name'])->getObjs(true);
@@ -17,6 +20,7 @@ if (isset($_GET['state']) && $_GET['state'] !== 'all') {
   </head>
   <body>
     <div class="content">
+      <!-- Главное меню -->
         <div class="main-menu">
             <div class="main-menu-status-link">
                 <ul class="main-menu-status-filters">
@@ -39,6 +43,7 @@ if (isset($_GET['state']) && $_GET['state'] !== 'all') {
             </div>
             <a href="?exit=true" class="main-menu-exit-link">Exit</a>
         </div>
+        <!-- Вывод списка заказов -->
         <?php
         print '<div class="announces">';
         foreach ($result as $order => $value) {

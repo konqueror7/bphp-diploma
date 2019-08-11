@@ -20,6 +20,13 @@ class JsonDataArray
     const PARAM_TYPE_STRING = 2;
     const PARAM_TYPE_UNSORTED = 3;
 
+    /**
+     * Конструктор формирует имя файла без пути и расширения
+     * из параметра, в него переданного, создает объект класса
+     * JsonFileAccessModel, который загружает из него содержимое в строковом виде
+     * а затем преобразует в json-объекты
+     * @param string $dataModelName имя файла без пути и расширения
+     */
     public function __construct($dataModelName = null)
     {
         //Создание имени файла из имени класса
@@ -29,7 +36,10 @@ class JsonDataArray
     }
 
     /*
-    * //Загрузка содержимого json-файла в два приватных свойства dataTitle и dataArray
+    * Загрузка содержимого json-файла
+    * в два приватных свойства:
+    * dataTitle - содержит номер последнего созданной записи
+    * dataArray - содержит все записи
     * и создание функцией newQuery() массива ключей из массива dataArray
     */
     public function load()
@@ -38,7 +48,10 @@ class JsonDataArray
         $this->dataArray = (array)$this->file->readJson()->dataArray;
         $this->newQuery();
     }
-    // Сохранение всего массива обратно в json-файл
+
+    /**
+     * Сохранение данных обратно в json-файл
+     */
     public function save()
     {
         $this->file->writeJSON([
@@ -49,8 +62,8 @@ class JsonDataArray
 
     /**
      * Создание в свойстве $query индексного массива
-     * ключей из массива $this->dataArray
-     * возврат текущего объекта со свойством $this->query
+     * ключей из массива записей $this->dataArray
+     * возвращает текущий объект
      * @return array
      */
     public function newQuery()
@@ -59,7 +72,9 @@ class JsonDataArray
         return $this;
     }
 
-    //Возвращает список ключей массива, загруженного из json-файла
+    /**
+     * Возвращает список ключей массива, загруженного из json-файла
+     */
     public function getGuids()
     {
         return $this->query;
@@ -88,7 +103,13 @@ class JsonDataArray
         return $result;
     }
 
-    //Поиск в массиве по ключу и его значению
+    /**
+     * Поиск в массиве по ключу и его значению
+     * @param  string  $param    название ключа в объекте записи
+     * @param  string  $value    значение ключа в объекте записи
+     * @param  boolean $findLike поиск похожих значений
+     * @return object  $this     возвращает текущий объект, очищенный от несовпадающих значений
+     */
     public function find($param, $value, $findLike = false)
     {
         foreach ($this->query as $index => $guid) {
@@ -105,7 +126,12 @@ class JsonDataArray
         array_values($this->query);
         return $this;
     }
-    //Добавление нового объекта в массив
+
+    /**
+     * Добавление нового объекта в массив записей dataArray
+     * возвращение ID этого объекта
+     * @param object $obj новая запись в dataArray
+     */
     public function add($obj)
     {
         $guid = self::GUID_PREFIX . ++$this->dataTitle->last_guid;
@@ -113,14 +139,25 @@ class JsonDataArray
         $this->query = [$guid];
         return $guid;
     }
-    //Изменение параметра объекта в массиве
+
+    /**
+     * Вероятно изменение параметра объекта в массиве
+     * (похоже что функция напимсана с ошибкой)
+     * @param  string $param     название ключа в объекте записи
+     * @param  string $new_value новое значение
+     */
     public function changeParam($param, $new_value)
     {
         foreach ($this->query as $obj) {
             $obj->$param = $new_value;
         }
     }
-    //Изменение объекта по его ключу
+
+    /**
+     * Изменение записи в массиве DataArray по ее ID-ключу
+     * @param  string $guid порядковый номер записи (ID)
+     * @param  object $obj  обновленный объект, который заменит старую запись
+     */
     public function changeObjByGuid($guid, $obj)
     {
         if (!is_null($this->dataArray[$guid])) {
@@ -157,10 +194,10 @@ class JsonDataArray
     }
 
     /**
-     * Поиск нужного ключа в списке ключей
+     * Поиск нужного ключа в списке извлеченных ключей
      * Извлечение из списка ключей массива ключа с искомым названием
-     * @param  [type] $guid [description]
-     * @return [type]       [description]
+     * @param  array  $guid - ID записи
+     * @return object $this - возвращает текущий объект
      */
     public function byGuid($guid)
     {

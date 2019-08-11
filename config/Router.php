@@ -1,5 +1,9 @@
 <?php
 class Router
+
+/**
+ * Проверка GET-параметров, вводимых в адресную строку
+ */
 {
     public $availableLinks;
 

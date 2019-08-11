@@ -1,33 +1,32 @@
 {
     "dataTitle": {
-        "last_guid": 25
+        "last_guid": 26
     },
     "dataArray": {
         "o1": {
             "executor": "Петя Васечкин",
             "client": "ООО Спецдальстрой",
-            "deadline": "1565217242",
-            "state": "new",
+            "deadline": "1565181238",
+            "state": "done",
             "origiLanguage": {
                 "ru": "Идейные соображения высшего порядка, а также укрепление и развитие структуры требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач. Задача организации, в особенности же консультация с широким активом требуют от нас анализа соответствующий условий активизации. Товарищи! реализация намеченных плановых заданий влечет за собой процесс внедрения и модернизации систем массового участия. Идейные соображения высшего порядка, а также консультация с широким активом влечет за собой процесс внедрения и модернизации форм развития."
             },
             "translations": {
                 "eng": "All day long we seemed to dawdle through a country which was full of beauty of every kind. Sometimes we saw little towns or castles on the top of steep hills such as we see in old missals; sometimes we ran by rivers and streams which seemed from the wide stony margin on each side of them to be subject to great floods. It takes a lot of water, and running strong, to sweep the outside edge of a river clear.",
-                "de": "",
                 "it": "Quel ramo del lago di Como, che volge a mezzogiorno, tra due catene non interrotte di monti, tutto a seni e a golfi, a seconda dello sporgere e del rientrare di quelli, vien, quasi a un tratto, a ristringersi, e a prender corso e figura di fiume, tra un promontorio a destra, e un’ampia costiera dall’altra parte; e il ponte, che ivi congiunge le due rive, par che renda ancor più sensibile all’occhio questa trasformazione, e segni il punto in cui il lago cessa, e l’Adda rincomincia, per ripigliar poi nome di lago dove le rive, allontanandosi di nuovo, lascian l’acqua distendersi e rallentarsi in nuovi golfi e in nuovi seni."
             }
         },
         "o2": {
             "executor": "Андрей Васильев",
             "client": "ОАО Рога",
-            "deadline": "1567895830",
-            "state": "done",
+            "deadline": "1567885349",
+            "state": "new",
             "origiLanguage": {
                 "ru": "Ушёл ажиотажа нью за, денег понять возможностей всю до. То шеф задаче порулил, до мог хороший словарь сомнений, глубже принять превосходные не вас. Главное страдаете вам по, не них опять самом работникам, где этих сайта сказать до. Меньше состояние ты дни, тд по минуты работали. Те вероломно возникновения это, такие прекрасно неодинаковые те кто, учимся забывают требования кто во."
             },
             "translations": {
-                "eng": "Mi Love! We left in pretty good time, and came after nightfall to Klausenburgh. Here I stopped for the night at the Hotel Royale. I had for dinner, or rather supper, a chicken done up some way with red pepper, which was very good but thirsty. (Mem. get recipe for Mina.) I asked the waiter and that, as it was a national dish, I should be able to get it anywhere along the Carpathians.",
-                "it": "La costiera, formata dal deposito di tre grossi torrenti, scende appoggiata a due monti contigui, l’uno detto di san Martino, l’altro, con voce lombarda, il Resegone, dai molti suoi cocuzzoli in fila, che in vero lo fanno somigliare a una sega: talché non è chi, al primo vederlo, purché sia di fronte, come per esempio di su le mura di Milano che guardano a settentrione, non lo discerna tosto, a un tal contrassegno, in quella lunga e vasta giogaia, dagli altri monti di nome più oscuro e di forma più comune."
+                "eng": "Mi Love! Mi Love! We left in pretty good time, and came after nightfall to Klausenburgh. Here I stopped for the night at the Hotel Royale. I had for dinner, or rather supper, a chicken done up some way with red pepper, which was very good but thirsty. (Mem. get recipe for Mina.) I asked the waiter and that, as it was a national dish, I should be able to get it anywhere along the Carpathians.",
+                "it": "La costiera, La costiera, formata dal deposito di tre grossi torrenti, scende appoggiata a due monti contigui, l’uno detto di san Martino, l’altro, con voce lombarda, il Resegone, dai molti suoi cocuzzoli in fila, che in vero lo fanno somigliare a una sega: talché non è chi, al primo vederlo, purché sia di fronte, come per esempio di su le mura di Milano che guardano a settentrione, non lo discerna tosto, a un tal contrassegno, in quella lunga e vasta giogaia, dagli altri monti di nome più oscuro e di forma più comune."
             }
         },
         "o3": {
@@ -58,84 +57,58 @@
         },
         "o6": {
             "executor": "Петя Васечкин",
-            "client": "Конь из норы",
-            "deadline": "1572520928",
+            "client": "Cheval du trou",
+            "deadline": "1548951812",
             "state": "new",
             "origiLanguage": {
-                "eng": "Конь говорящий, с седлом, настоящий!"
+                "eng": "I had for breakfast more paprika, and a sort of porridge of maize flour which they said was \"mamaliga\", and egg-plant stuffed with forcemeat, a very excellent dish, which they call \"impletata\". (Mem., get recipe for this also.)"
             },
             "translations": {
-                "de": "111 настоящий",
-                "fr": "111 с седлом"
+                "de": "Als es die ersten Hügel des Kursivgebirges erklommen hatte, warf es einen letzten Blick zurück auf die Skyline seiner Heimatstadt Buchstabhausen, die Headline von Alphabetdorf und die Subline seiner eigenen Straße, der Zeilengasse. Wehmütig lief ihm eine rethorische Frage über die Wange, dann setzte es seinen Weg fort.",
+                "fr": "Et je ne concevrais pas clairement et selon la vérité ce que c’est que la cire, si je ne pensais qu’elle est capable de recevoir plus de variétés selon l’extension, que je n’en ai jamais imaginé. Il faut donc que je tombe d’accord, que je ne saurais pas même concevoir par l’imagination ce que c’est que cette cire, et qu’il n’y a que mon entendement seul qui le conçoive; je dis ce morceau de cire en particulier, car pour la cire en général, il est encore plus évident."
             }
         },
         "o20": {
             "executor": "Андрей Васильев",
-            "client": "Кабан летучий",
-            "deadline": "1571981683",
+            "client": "Sanglier",
+            "deadline": "1572625543",
             "state": "new",
-            "origiLanguage": {
-                "ru": "Кабан летучий"
-            },
-            "translations": {
-                "eng": "Кабан летучий",
-                "de": "Кабан летучий"
-            }
-        },
-        "o21": {
-            "executor": "Петя Васечкин",
-            "client": "Кабан летучий",
-            "deadline": "1571990305",
-            "state": "new",
-            "origiLanguage": {
-                "ru": "Кабан летучий"
-            },
-            "translations": {
-                "eng": "Кабан летучий",
-                "de": "Кабан летучий",
-                "fr": "Кабан летучий",
-                "it": "Кабан летучий"
-            }
-        },
-        "o22": {
-            "executor": "Андрей Васильев",
-            "client": "Кабан летучий",
-            "deadline": "1572003336",
-            "state": "new",
-            "origiLanguage": {
-                "ru": "Кабан летучий "
-            },
-            "translations": {
-                "eng": "",
-                "de": ""
-            }
-        },
-        "o23": {
-            "executor": "Андрей Васильев",
-            "client": "Конь из глубокой норы",
-            "deadline": "1571916263",
-            "state": "resolved",
-            "origiLanguage": {
-                "ru": "Конь из норы говорящий"
-            },
-            "translations": {
-                "eng": "Конь из норы говорящий говорящий",
-                "de": "Конь из норы говорящий",
-                "it": "Конь из норы говорящий"
-            }
-        },
-        "o25": {
-            "executor": "Андрей Васильев",
-            "client": "Невероятно прыгучий кузнец",
-            "deadline": "1574894528",
-            "state": "resolved",
             "origiLanguage": {
                 "ru": "Мог от палки поехала, бы них итак полазить, на биг применимы разработки. Заботит которые принадлежите том бы. Ты бог убегай человек закончить, том во очередь работник возникновения, не когда участки принадлежите всю. За опа языке медицинское сэкономленного. Код любых голос об. Люди поток кэмбридже так не. Их где многие большим."
             },
             "translations": {
-                "de": "Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien leben die Blindtexte. Abgeschieden wohnen Sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht - ein geradezu unorthographisches Leben.",
-                "fr": "Commençons par la considération des choses les plus communes, et que nous croyons comprendre le plus distinctement, à savoir les corps que nous touchons et que nous voyons. Je n’entends pas parler des corps en général, car ces notions générales sont d’ordinaire plus confuses, mais de quelqu’un en particulier. Prenons pour exemple ce morceau de cire qui vient d’être tiré de la ruche : il n’a pas encore perdu la douceur du miel qu’il contenait, il retient encore quelque chose de l’odeur des fleurs dont il a été recueilli; sa couleur, sa figure, sa grandeur, sont apparentes; il est dur, il est froid, on le touche, et si vous le frappez, il rendra quelque son.",
-                "it": "Ai tempi in cui accaddero i fatti che prendiamo a raccontare, quel borgo, già considerabile, era anche un castello, e aveva perciò l’onore d’alloggiare un comandante, e il vantaggio di possedere una stabile guarnigione di soldati spagnoli, che insegnavan la modestia alle fanciulle e alle donne del paese, accarezzavan di tempo in tempo le spalle a qualche marito, a qualche padre; e, sul finir dell’estate, non mancavan mai di spandersi nelle vigne, per diradar l’uve, e alleggerire a’ contadini le fatiche della vendemmia.\r\n"
+                "eng": "I had for breakfast more paprika, and a sort of porridge of maize flour which they said was \"mamaliga\", and egg-plant stuffed with forcemeat, a very excellent dish, which they call \"impletata\". (Mem., get recipe for this also.)",
+                "de": "Doch alles Gutzureden konnte es nicht überzeugen, und so dauerte es nicht lange, bis ihm ein paar heimtückische Werbetexter auflauerten, es mit Langue und Parole betrunken machten und es dann in ihre Agentur schleppten, wo sie es für ihre Projekte wieder und wieder mißbrauchten. Und wenn es nicht umgeschrieben wurde, dann benutzen Sie es immer noch."
+            }
+        },
+        "o21": {
+            "executor": "Петя Васечкин",
+            "client": "Какой-то неопознанный клиент",
+            "deadline": "1575118695",
+            "state": "new",
+            "origiLanguage": {
+                "ru": "Конь подземный, питается грибами, порет всякую чушь и летает на отдых в Италию"
+            },
+            "translations": {
+                "eng": "Underground horse, eats mushrooms, smacks all sorts of nonsense and flies to rest in Italy",
+                "de": "Untergrundpferd, frisst Pilze, schmatzt jede Menge Blödsinn und fliegt, um sich in Italien auszuruhen",
+                "fr": "Cheval souterrain mange des champignons, sent toutes sortes de bêtises et se repose en Italie",
+                "it": "Cavallo sotterraneo, mangia funghi, schizza ogni sorta di assurdità e vola per riposare in Italia"
+            }
+        },
+        "o26": {
+            "executor": "Андрей Васильев",
+            "client": "ОАО Вавилон",
+            "deadline": "1598458448",
+            "state": "resolved",
+            "origiLanguage": {
+                "eng": "3 May. Bistritz.--Left Munich at 8:35 P.M., on 1st May, arriving at Vienna early next morning; should have arrived at 6:46, but train was an hour late. Buda-Pesth seems a wonderful place, from the glimpse which I got of it from the train and the little I could walk through the streets. I feared to go very far from the station, as we had arrived late and would start as near the correct time as possible."
+            },
+            "translations": {
+                "ru": "Три то любых случае. Сомнений остальных как те, бы меня крутые бог, их они курице хорошего. Редактор большого использует он оно, во бог меньше раннего. Ну коду разработкой три. Лет буду остальные за, вот меня предлагаю то.",
+                "de": "Unterwegs traf es eine Copy. Die Copy warnte das Blindtextchen, da, wo sie herkäme, wäre sie zigmal umgeschrieben worden und alles, was von ihrem Ursprung noch übrig wäre, sei das Wort „und“ und das Blindtextchen solle umkehren und wieder in sein eigenes, sicheres Land zurückkehren.",
+                "it": "La costiera, formata dal deposito di tre grossi torrenti, scende appoggiata a due monti contigui, l’uno detto di san Martino, l’altro, con voce lombarda, il Resegone, dai molti suoi cocuzzoli in fila, che in vero lo fanno somigliare a una sega: talché non è chi, al primo vederlo, purché sia di fronte, come per esempio di su le mura di Milano che guardano a settentrione, non lo discerna tosto, a un tal contrassegno, in quella lunga e vasta giogaia, dagli altri monti di nome più oscuro e di forma più comune.",
+                "esp": "Commençons par la considération des choses les plus communes, et que nous croyons comprendre le plus distinctement, à savoir les corps que nous touchons et que nous voyons. Je n’entends pas parler des corps en général, car ces notions générales sont d’ordinaire plus confuses, mais de quelqu’un en particulier. Prenons pour exemple ce morceau de cire qui vient d’être tiré de la ruche : il n’a pas encore perdu la douceur du miel qu’il contenait, il retient encore quelque chose de l’odeur des fleurs dont il a été recueilli; sa couleur, sa figure, sa grandeur, sont apparentes; il est dur, il est froid, on le touche, et si vous le frappez, il rendra quelque son."
             }
         }
     }

@@ -1,38 +1,22 @@
 <?php
 
-if (isset($_GET['state']) && $_GET['state'] !== 'all') {
+/**
+ * Фльтрация списка заказов по их состоянию
+ */
+if (!empty($_GET['state']) && $_GET['state'] !== 'all') {
     $result = $orders->find('state', $_GET['state'])->getObjs(true);
 } else {
     $result = $orders->getObjs(true);
 }
 
+/**
+ * Удаление заказа
+ */
 if (isset($_GET['delete'])) {
     $order = new Order($_GET['delete']);
     $order->delete();
     header('Location: http://' . $_SERVER['HTTP_HOST'] . '/tasklist.php');
 }
-
-// if (isset($_GET['order'])) {
-//     if ($_GET['order'] == 'new' && $_SESSION['role'] == Config::MANAGER_ROLE) {
-//         header('Location: http://' . $_SERVER['HTTP_HOST'] . '/edit.php?order='.$_GET['order']);
-//     } elseif ($_GET['order'] !== 'new') {
-//         if ($_SESSION['role'] == Config::MANAGER_ROLE) {
-//               $router = new Router($orders->getGuids());
-//         } elseif ($_SESSION['role'] == Config::TRANSLATOR_ROLE) {
-//                 $router = new Router($orders->newQuery()->find('name', $_SESSION['name']));
-//         }
-//         try {
-//             $router->isAvailablePage();
-//             header('Location: http://' . $_SERVER['HTTP_HOST'] . '/edit.php?order='.$_GET['order']);
-//             // echo 'Вы находитесь на странице <b>'.$_GET['order'].'</b>';
-//         } catch (Exception $e) {
-//             echo $e->getMessage();
-//             header('Location: http://' . $_SERVER['HTTP_HOST'] . '/my404.php', 404);
-//         }
-//     }
-// }
-
-
 
 ?>
 
@@ -45,6 +29,7 @@ if (isset($_GET['delete'])) {
   </head>
   <body>
     <div class="content">
+      <!-- Главное меню -->
         <div class="main-menu">
             <div class="main-menu-status-link">
                 <ul class="main-menu-status-filters">
@@ -70,6 +55,7 @@ if (isset($_GET['delete'])) {
               <a href="?exit=true" class="main-menu-exit-link">Exit</a>
             </div>
         </div>
+        <!-- Вывод списка заказов -->
         <?php
         print '<div class="announces">';
         foreach ($result as $order => $value) {
@@ -82,8 +68,8 @@ if (isset($_GET['delete'])) {
 
             print '<div class="announce-actions-requizite">';
             print '<div class="announce-actions">';
-            print '<a href="?order='.$order.'" class="button">Edit</a>';
-            print '<a href="?delete='.$order.'" class="button">Delete</a>';
+            print '<a href="?order='.$order.'" class="button button-manager">Edit</a>';
+            print '<a href="?delete='.$order.'" class="button button-manager">Delete</a>';
             print '</div>';
 
             print '<div class="announce-requizite">';
