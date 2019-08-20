@@ -31,7 +31,7 @@ if (!empty($_GET['state']) && $_GET['state'] !== 'all') {
                         <a href="?state=resolved">Resolved</a>
                     </li>
                     <li class="main-menu-status-filters-item">
-                        <a href="?state=rejected">Rejected</a>
+                        <a href="?state=reject">Rejected</a>
                     </li>
                     <li class="main-menu-status-filters-item">
                         <a href="?state=done">Done</a>

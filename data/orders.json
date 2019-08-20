@@ -20,12 +20,12 @@
             "executor": "Андрей Васильев",
             "client": "ОАО Рога",
             "deadline": "1567885349",
-            "state": "new",
+            "state": "resolved",
             "origiLanguage": {
                 "ru": "Ушёл ажиотажа нью за, денег понять возможностей всю до. То шеф задаче порулил, до мог хороший словарь сомнений, глубже принять превосходные не вас. Главное страдаете вам по, не них опять самом работникам, где этих сайта сказать до. Меньше состояние ты дни, тд по минуты работали. Те вероломно возникновения это, такие прекрасно неодинаковые те кто, учимся забывают требования кто во."
             },
             "translations": {
-                "eng": "Mi Love! Mi Love! We left in pretty good time, and came after nightfall to Klausenburgh. Here I stopped for the night at the Hotel Royale. I had for dinner, or rather supper, a chicken done up some way with red pepper, which was very good but thirsty. (Mem. get recipe for Mina.) I asked the waiter and that, as it was a national dish, I should be able to get it anywhere along the Carpathians.",
+                "eng": "Mi Love! We left in pretty good time, and came after nightfall to Klausenburgh. Here I stopped for the night at the Hotel Royale. I had for dinner, or rather supper, a chicken done up some way with red pepper, which was very good but thirsty. (Mem. get recipe for Mina.) I asked the waiter and that, as it was a national dish, I should be able to get it anywhere along the Carpathians.",
                 "it": "La costiera, La costiera, formata dal deposito di tre grossi torrenti, scende appoggiata a due monti contigui, l’uno detto di san Martino, l’altro, con voce lombarda, il Resegone, dai molti suoi cocuzzoli in fila, che in vero lo fanno somigliare a una sega: talché non è chi, al primo vederlo, purché sia di fronte, come per esempio di su le mura di Milano che guardano a settentrione, non lo discerna tosto, a un tal contrassegno, in quella lunga e vasta giogaia, dagli altri monti di nome più oscuro e di forma più comune."
             }
         },
@@ -58,8 +58,8 @@
         "o6": {
             "executor": "Петя Васечкин",
             "client": "Cheval du trou",
-            "deadline": "1548951812",
-            "state": "new",
+            "deadline": "1548964504",
+            "state": "reject",
             "origiLanguage": {
                 "eng": "I had for breakfast more paprika, and a sort of porridge of maize flour which they said was \"mamaliga\", and egg-plant stuffed with forcemeat, a very excellent dish, which they call \"impletata\". (Mem., get recipe for this also.)"
             },
@@ -71,13 +71,13 @@
         "o20": {
             "executor": "Андрей Васильев",
             "client": "Sanglier",
-            "deadline": "1572625543",
-            "state": "new",
+            "deadline": "1572638248",
+            "state": "resolved",
             "origiLanguage": {
                 "ru": "Мог от палки поехала, бы них итак полазить, на биг применимы разработки. Заботит которые принадлежите том бы. Ты бог убегай человек закончить, том во очередь работник возникновения, не когда участки принадлежите всю. За опа языке медицинское сэкономленного. Код любых голос об. Люди поток кэмбридже так не. Их где многие большим."
             },
             "translations": {
-                "eng": "I had for breakfast more paprika, and a sort of porridge of maize flour which they said was \"mamaliga\", and egg-plant stuffed with forcemeat, a very excellent dish, which they call \"impletata\". (Mem., get recipe for this also.)",
+                "eng": "I had I had for breakfast more paprika, and a sort of porridge of maize flour which they said was \"mamaliga\", and egg-plant stuffed with forcemeat, a very excellent dish, which they call \"impletata\". (Mem., get recipe for this also.)",
                 "de": "Doch alles Gutzureden konnte es nicht überzeugen, und so dauerte es nicht lange, bis ihm ein paar heimtückische Werbetexter auflauerten, es mit Langue und Parole betrunken machten und es dann in ihre Agentur schleppten, wo sie es für ihre Projekte wieder und wieder mißbrauchten. Und wenn es nicht umgeschrieben wurde, dann benutzen Sie es immer noch."
             }
         },

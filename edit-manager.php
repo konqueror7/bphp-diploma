@@ -50,7 +50,11 @@ if (isset($_POST['submit']) || isset($_POST['state'])) {
             </div>
             <form class="" action="" name="order-manager" method="post">
                 <div class="form-group flex-row">
+                    <!-- Скрытое поле с номером заказа, значение принимает из GET-параметра адресной строки 'order' -->
                     <input type="hidden" name="ordernumber" value="<?php print $_GET['order'] ?>">
+                    <!-- Скрытое поле с состоянием заказа, значение принимает
+                    из свойства 'state' объекта в переменной $getsOrder -->
+                    <input type="hidden" name="state" value="<?php print $getsOrder->state ?>">
                     <!-- Выбор ответсвенного за заказ -->
                     <label for="executor" class="label-executor">Ответственный:
                         <select class="select-executor" name="executor" size="1" required>
